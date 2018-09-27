@@ -3,6 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 require('es6-promise').polyfill();
 
@@ -25,6 +26,7 @@ module.exports = {
     plugins: [
 
         new ExtractTextPlugin('./roblox-pro/css/app.css'),
+        new UglifyJsPlugin()
 
     ],
 
@@ -50,7 +52,12 @@ module.exports = {
                     fallback: 'style-loader',
                     use: [
 
-                        'css-loader',
+                        {
+
+                            loader: 'css-loader',
+                            options: { minimize: true }
+                            
+                        },
                         'postcss-loader',
                         'sass-loader'
 
@@ -75,7 +82,7 @@ module.exports = {
                             basedir: __dirname + '/resources/views/'
 
                         }
-                        
+
                     }
 
                 ],

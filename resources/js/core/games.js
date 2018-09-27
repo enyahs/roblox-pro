@@ -38,7 +38,7 @@ const createGameStatsButton = async () =>
     )
     {
 
-        gameButtonsContainer.innerHTML += '<div class="clearfix"></div><div class="rp-btn rp-bg-primary"><div id="view_stats" class="btn-secondary-lg" style="margin-top: .5rem">View Game Stats</div><button id="go-to-options" style="display:none">Go to options</button></div>';
+        gameButtonsContainer.innerHTML += '<div class="clearfix"></div><div class="rp-btn rp-bg-primary"><div id="view_stats" class="btn-secondary-lg" style="margin-top: .75rem; margin-bottom: .75rem;">View Game Stats</div><button id="go-to-options" style="display:none">Go to options</button></div>';
 
     }
 
