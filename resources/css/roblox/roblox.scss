@@ -1,0 +1,125 @@
+.btn-primary-lg,
+.btn-secondary-lg 
+{
+
+    min-width: 100% !important;
+
+}
+
+.abp,
+.ads-container,
+.abp-spacer 
+{
+
+    display: none !important;
+
+}
+
+.games-page-left 
+{
+
+    margin-right: 0 !important;
+
+}
+
+.content 
+{
+
+    max-width: 100% !important;
+
+}
+
+.page-content 
+{
+
+    float: none !important;
+    margin: 0 auto !important;
+
+}
+
+.game-title-container 
+{
+
+    padding-bottom: 1rem !important;
+
+}
+
+.game-main-content 
+{
+
+    display: flex !important;
+    height: 100% !important;
+
+}
+
+.game-thumb-container,
+.game-calls-to-action 
+{
+
+    float: none;
+
+}
+
+.messages-container 
+{
+
+    float: none !important;
+    max-width: 100% !important;
+
+}
+
+.catalog-container,
+.robux-container,
+.messages-container,
+.page-content,
+#friends-container,
+#user-account,
+#HomeContainer,
+{
+
+    float: none !important;
+    max-width: 970px !important;
+    margin: 0 auto !important;
+
+}
+
+.game-buttons-container 
+{
+
+    position: relative !important;
+    padding: 0 !important;
+
+}
+
+#item-details-description 
+{
+
+    white-space: normal;
+
+}
+
+@media (max-width: 991px) 
+{
+
+    .game-main-content 
+    {
+
+        display: block !important;
+
+    }
+
+    .game-calls-to-action 
+    {
+
+        padding: 0 !important;
+
+    }
+
+    .game-calls-to-action .game-title-container 
+    {
+
+        padding: 20px !important;
+
+    }
+    
+}

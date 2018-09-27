@@ -1,0 +1,69 @@
+{
+
+    "manifest_version": 2,
+
+    "name": "Roblox Pro",
+    "version": "1.0.0",
+    "description": "Improve Roblox using the tools provided inside this extention.",
+    "background": {
+
+        "scripts": [
+
+            "./js/background.js"
+
+        ],
+        "persistent": true
+
+    },
+    "content_scripts": [
+        {
+
+            "css": [
+
+                "./css/app.css"
+
+            ],
+            "matches": [
+
+                "*://*.roblox.com/*"
+
+            ],
+            "run_at": "document_start"
+
+        },
+        {
+
+            "run_at": "document_end",
+            "matches": ["*://*.roblox.com/*"],
+            "js": ["./js/app.js"]
+
+        }
+    ],
+
+    "web_accessible_resources": [
+
+        "./images/*"
+
+    ],
+
+    "browser_action":  {
+
+        "default_icon": "./images/icons/icon_128x128.png"
+
+    },
+
+    "permissions": [
+        "activeTab",
+        "identity",
+        "clipboardWrite",
+        "notifications",
+        "storage",
+        "webRequest",
+        "<all_urls>"
+    ],
+
+    "icons": {
+        "128":"./images/icons/icon_128x128.png"
+    }
+
+}
