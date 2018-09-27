@@ -9,8 +9,10 @@ require('es6-promise').polyfill();
 module.exports = {
 
     entry: {
+
         'app': './resources/app.js',
         'background': './resources/background.js'
+
     },
 
     output: {
@@ -65,7 +67,16 @@ module.exports = {
                     "file-loader?name=./roblox-pro/html/[name].html",
                     "extract-loader",
                     "html-loader",
-                    "pug-html-loader"
+                    {
+
+                        loader: "pug-html-loader",
+                        options: {
+
+                            basedir: __dirname + '/resources/views/'
+
+                        }
+                        
+                    }
 
                 ],
 

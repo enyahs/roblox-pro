@@ -1,6 +1,7 @@
+block vars
 doctype html
 html
     head
-        title 
+        title #{title ? title + ' - ' : ''}Roblox Pro
     body
-        block content
+        block layout
