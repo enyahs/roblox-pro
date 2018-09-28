@@ -48,26 +48,34 @@ const createGameStatsButtonEvent = async () =>
 const createGameStatsButton = async () =>
 {
 
-    // Select Roblox Play Buttons Container
-    const gameButtonsContainer = document.querySelector('#MultiplayerVisitButton');
+    // Select Roblox Play Button
+    const gamePlayButton = document.querySelector('#MultiplayerVisitButton');
 
     if(
 
-        // Validate Roblox Play Buttons Container exists
-        gameButtonsContainer
+        // Validate Roblox Play Button exists
+        gamePlayButton
 
     )
     {
 
-        // Add HTML to the end of Roblox Play Buttons Container
-        const salesDiv = document.createElement('div');
-        salesDiv.setAttribute("id", "view_stats");
-        salesDiv.classList.add("btn-secondary-lg");
+         // Create new Element for Viewing Game Stats
+        const viewStatsButton = document.createElement('div');
 
-        salesDiv.setAttribute('style', 'margin-top: .75rem; margin-bottom: .75rem;');
-        salesDiv.innerHTML ='View Game Stats';
+        // Add ID to View Stats Button
+        viewStatsButton.setAttribute("id", "view_stats");
 
-        gameButtonsContainer.insertAdjacentElement('afterend', salesDiv);
+        // Add Classes to View Stats Button
+        viewStatsButton.classList.add("btn-secondary-lg");
+
+        // Add Inline Style to View Stats Button
+        viewStatsButton.setAttribute('style', 'margin-top: .75rem; margin-bottom: .75rem;');
+
+        // Set html inside View Stats Button
+        viewStatsButton.innerHTML ='View Game Stats';
+
+        // Insert View Stats Button After Roblox Play Button
+        gamePlayButton.insertAdjacentElement('afterend', viewStatsButton);
 
     }
 

@@ -6,10 +6,18 @@
 export const get_current_location_id = async () => 
 {
 
-    // Current URL Location
+    /**
+     * Current Window Location
+     * 
+     * @var String - url
+     */
     const url = window.location.href;
 
-    // Current Location ID
+    /**
+     * Current Location ID
+     * 
+     * @var Int - current_location
+     */
     let current_location = 0;
 
     // Validate Location

@@ -1,4 +1,8 @@
-const robloxPro = require('./js/core/roblox-pro.js');
-const robloxProViews = require('./views.js');
+// Application JavaScript Files
+import './js/core/roblox-pro.js';
 
-require('./css/app.scss')
+// Application Views
+import './views.js';
+
+// Application Stylesheet
+import './css/app.scss'
