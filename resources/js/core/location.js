@@ -1,5 +1,3 @@
-(function () { 'use strict' }());
-
 /**
  * Gets the id of the current page location.
  * 

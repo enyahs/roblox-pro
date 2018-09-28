@@ -16,7 +16,6 @@ const createSalesField = async (itemType) =>
             const api = (id == 4) ? 'https://api.roblox.com/marketplace/game-pass-product-info?gamePassId=' : 'https://api.roblox.com/marketplace/productinfo?assetId=';
             const dataItemId = (id == 4) ? itemContainer.getAttribute('data-delete-id') : itemContainer.getAttribute('data-item-id'); 
 
-            console.log(window.current_location);
             fetch(api + dataItemId)
             .then((response) => response.json())
             .then((data) => {
@@ -44,14 +43,8 @@ const enableSales = async () =>
 
 }
 
-const setup_catalog_page = async () => {
-
-    await enableSales();
-
-}
-
 export {
 
-    setup_catalog_page
+    enableSales
     
 };

@@ -53,6 +53,7 @@
     },
 
     "permissions": [
+
         "activeTab",
         "identity",
         "clipboardWrite",
@@ -60,10 +61,13 @@
         "storage",
         "webRequest",
         "<all_urls>"
+        
     ],
 
     "icons": {
+
         "128":"./images/icons/icon_128x128.png"
+
     }
 
 }
