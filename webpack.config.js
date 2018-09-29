@@ -1,6 +1,7 @@
 (function () { 'use strict' }());
 
 const path = require('path');
+const glob = require('glob');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -12,6 +13,7 @@ module.exports = {
     entry: {
 
         'app': './resources/app.js',
+        'views': glob.sync("./resources/views/pages/**/*.pug"),
         'background': './resources/background.js'
 
     },
