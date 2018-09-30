@@ -9,6 +9,9 @@ import { setup_games_page } from './games/setup.js'
 current_location.then(id => 
 {
     
+    // Google Analytics
+    chrome.runtime.sendMessage({action: '_gt'}, (r) => {});
+
     switch(id)
     {
 

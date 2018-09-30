@@ -3,7 +3,7 @@
     "manifest_version": 2,
 
     "name": "Roblox Pro",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Improve Roblox using the tools provided inside this extension.",
     "background": {
 
@@ -15,6 +15,7 @@
         "persistent": true
 
     },
+    "content_security_policy": "default-src 'self' https://www.google-analytics.com 'self'",
     "content_scripts": [
         {
 
@@ -34,7 +35,11 @@
         {
 
             "run_at": "document_end",
-            "matches": ["*://*.roblox.com/*"],
+            "matches": [
+
+                "*://*.roblox.com/*"
+                
+            ],
             "js": ["./js/app.js"]
 
         }

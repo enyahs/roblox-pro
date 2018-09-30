@@ -1,5 +1,7 @@
+#node
 node_modules/
 
+#assets
 roblox-pro/css/
 roblox-pro/js/
 roblox-pro/html/

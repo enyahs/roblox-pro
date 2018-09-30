@@ -18,8 +18,8 @@ const createGameStatsButtonEvent = async () =>
         /**
          * Add Click Event to Game Stats Button
          * 
-         * @param string - Current Event
-         * @param function - Execute on Event
+         * @param {string} - Current Event
+         * @param {function} - Execute on Event
          */
         viewStatsButton.addEventListener('click', () => 
         {
