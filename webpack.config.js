@@ -11,9 +11,11 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 require('es6-promise').polyfill();
 
 let pathsToClean = [
+
     'roblox-pro/js/*.js',
     'roblox-pro/css/*.css',
     'roblox-pro/html/*.html'
+
 ];
 
 module.exports = {
@@ -21,6 +23,8 @@ module.exports = {
     entry: {
 
         'app': './resources/app.js',
+        'web': './resources/web.js',
+
         'views': glob.sync("./resources/views/pages/**/*.pug"),
         'background': './resources/background.js'
 
@@ -39,10 +43,11 @@ module.exports = {
     plugins: [
 
         new CleanWebpackPlugin(pathsToClean, {dry: false, watch: true, beforeEmit: true}),
-        new ExtractTextPlugin('./roblox-pro/css/app.css'),
+        new ExtractTextPlugin('./roblox-pro/css/[name].css'),
         new UglifyJsPlugin(),
         new PurgecssPlugin({
             paths: glob.sync('./resources/views/**/*.pug', { nodir: true }),
+            only: ['./roblox-pro/css/web.css']
         }),
 
     ],
