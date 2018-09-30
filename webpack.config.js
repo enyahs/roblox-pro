@@ -5,15 +5,23 @@ const glob = require('glob');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 require('es6-promise').polyfill();
+
+let pathsToClean = [
+    'roblox-pro/js/*.js',
+    'roblox-pro/css/*.css',
+    'roblox-pro/html/*.html'
+];
 
 module.exports = {
 
     entry: {
 
         'app': './resources/app.js',
-        //'views': glob.sync("./resources/views/pages/**/*.pug"),
+        'views': glob.sync("./resources/views/pages/**/*.pug"),
         'background': './resources/background.js'
 
     },
@@ -21,14 +29,21 @@ module.exports = {
     output: {
 
         path: __dirname,
+        publicPath: './',
         filename: './roblox-pro/js/[name].js'
 
     },
 
+    watch: true,
+
     plugins: [
 
+        new CleanWebpackPlugin(pathsToClean, {dry: false, watch: true, beforeEmit: true}),
         new ExtractTextPlugin('./roblox-pro/css/app.css'),
-        new UglifyJsPlugin()
+        new UglifyJsPlugin(),
+        new PurgecssPlugin({
+            paths: glob.sync('./resources/views/**/*.pug', { nodir: true }),
+        }),
 
     ],
 
