@@ -1,5 +1,7 @@
 /**
  * Create Game Stats Button Event
+ * 
+ * @return {AsyncFunction}
  */
 const createGameStatsButtonEvent = async () => 
 {
@@ -44,6 +46,8 @@ const createGameStatsButtonEvent = async () =>
 
 /**
  * Create Game Stats Button
+ * 
+ * @return {AsyncFunction}
  */
 const createGameStatsButton = async () =>
 {
@@ -83,6 +87,8 @@ const createGameStatsButton = async () =>
 
 /**
  * Create Elements for Roblox Games Page
+ * 
+ * @return {AsyncFunction}
  */
 const createElements = async () =>
 {
@@ -93,6 +99,8 @@ const createElements = async () =>
 
 /**
  * Create Events for Roblox Games Page
+ * 
+ * @return {AsyncFunction}
  */
 const createEvents = async () =>
 {
@@ -104,6 +112,8 @@ const createEvents = async () =>
 
 /**
  * Enable External Game Stats Tool
+ * 
+ * @return {AsyncFunction}
  */
 const enableGameStats = async () =>
 {

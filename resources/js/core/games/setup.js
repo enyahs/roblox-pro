@@ -2,6 +2,8 @@ import { enableGameStats } from './game_stats.js'
 
 /**
  * Setup Roblox Games
+ * 
+ * @return {AsyncFunction}
  */
 const setup_games_page = async () => 
 {
