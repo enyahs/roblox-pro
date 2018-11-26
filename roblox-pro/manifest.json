@@ -3,7 +3,7 @@
     "manifest_version": 2,
 
     "name": "Roblox Pro",
-    "version": "1.1.1",
+    "version": "1.0.2",
     "description": "Improve Roblox using the tools provided inside this extension.",
     "background": {
 
