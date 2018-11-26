@@ -48,6 +48,7 @@ const openOptionsPage = () =>
  */
 const _setup = async () =>
 {
+    
 
     // Setup Google Analytics
     await setup_ga();
