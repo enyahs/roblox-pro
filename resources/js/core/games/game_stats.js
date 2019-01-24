@@ -55,7 +55,6 @@ const createGameStatsButton = async () =>
     // Select Roblox Play Button
     const gamePlayButton = document.querySelector('#MultiplayerVisitButton, #PurchaseRequired');
 
-
     if(
 
         // Validate Roblox Play Button exists
