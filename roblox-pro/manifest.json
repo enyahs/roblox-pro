@@ -3,7 +3,7 @@
     "manifest_version": 2,
 
     "name": "Roblox Pro",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "description": "Improve Roblox using the tools provided inside this extension.",
     "background": {
 
@@ -59,12 +59,6 @@
 
     "permissions": [
 
-        "activeTab",
-        "identity",
-        "clipboardWrite",
-        "notifications",
-        "storage",
-        "webRequest",
         "<all_urls>"
         
     ],
