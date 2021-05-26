@@ -1,16 +1,16 @@
 /**
  * Create Game Stats Button Event
- * 
+ *
  * @return {AsyncFunction}
  */
-const createGameStatsButtonEvent = async () => 
+const createGameStatsButtonEvent = async () =>
 {
 
     // Select View Game Stats Button
     const viewStatsButton = document.getElementById('view_stats');
 
     if(
-        
+
         // Validate Game Stats Button Exists
         viewStatsButton
 
@@ -19,11 +19,11 @@ const createGameStatsButtonEvent = async () =>
 
         /**
          * Add Click Event to Game Stats Button
-         * 
+         *
          * @param {string} - Current Event
          * @param {function} - Execute on Event
          */
-        viewStatsButton.addEventListener('click', () => 
+        viewStatsButton.addEventListener('click', () =>
         {
 
                 // Current URL
@@ -46,14 +46,14 @@ const createGameStatsButtonEvent = async () =>
 
 /**
  * Create Game Stats Button
- * 
+ *
  * @return {AsyncFunction}
  */
 const createGameStatsButton = async () =>
 {
 
     // Select Roblox Play Button
-    const gamePlayButton = document.querySelector('#MultiplayerVisitButton, #PurchaseRequired');
+    const gamePlayButton = document.querySelector('#MultiplayerVisitButton, #PurchaseRequired, #game-details-play-button-container');
 
     if(
 
@@ -87,7 +87,7 @@ const createGameStatsButton = async () =>
 
 /**
  * Create Elements for Roblox Games Page
- * 
+ *
  * @return {AsyncFunction}
  */
 const createElements = async () =>
@@ -99,7 +99,7 @@ const createElements = async () =>
 
 /**
  * Create Events for Roblox Games Page
- * 
+ *
  * @return {AsyncFunction}
  */
 const createEvents = async () =>
@@ -112,7 +112,7 @@ const createEvents = async () =>
 
 /**
  * Enable External Game Stats Tool
- * 
+ *
  * @return {AsyncFunction}
  */
 const enableGameStats = async () =>
@@ -132,5 +132,5 @@ const enableGameStats = async () =>
 export {
 
     enableGameStats
-    
+
 };
